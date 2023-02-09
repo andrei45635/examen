@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<AnchorPane prefHeight="603.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen.controller.HelpController">
+   <children>
+      <BorderPane layoutX="-2.0" prefHeight="604.0" prefWidth="916.0">
+         <center>
+            <TabPane prefHeight="604.0" prefWidth="916.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="dorescSaAjutTab" text="Doresc sa ajut!">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="nevoiTableView" layoutY="-3.0" prefHeight="580.0" prefWidth="461.0">
+                                <columns>
+                                  <TableColumn fx:id="titluNevoieColumn" prefWidth="75.0" text="titlu" />
+                                  <TableColumn fx:id="descNevoieColumn" prefWidth="75.0" text="descriere" />
+                                    <TableColumn fx:id="deadlineNevoieColumn" prefWidth="75.0" text="deadline" />
+                                    <TableColumn fx:id="omNevoieNevoieColumn" prefWidth="75.0" text="omInNevoie" />
+                                    <TableColumn fx:id="salvatorColumn" prefWidth="75.0" text="omSalvator" />
+                                    <TableColumn fx:id="statusNevoieColumn" prefWidth="85.0" text="status" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="fapteBuneTableView" layoutX="460.0" layoutY="-1.0" prefHeight="576.0" prefWidth="457.0">
+                                <columns>
+                                  <TableColumn fx:id="titluBunColumn" prefWidth="75.0" text="titlu" />
+                                  <TableColumn fx:id="descBunColumn" prefWidth="75.0" text="descriere" />
+                                    <TableColumn fx:id="deadlineBunColumn" prefWidth="75.0" text="deadline" />
+                                    <TableColumn fx:id="nevoieBunColumn" prefWidth="75.0" text="omInNevoie" />
+                                    <TableColumn fx:id="salvatorBunColumn" prefWidth="74.0" text="omSalvator" />
+                                    <TableColumn fx:id="statusBunColumn" prefWidth="82.0" text="status" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="dorescAjutorTab" text="Doresc sa fiu ajutat!">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="titluFormularTF" layoutX="46.0" layoutY="35.0" />
+                              <TextField fx:id="descriereFormularTF" layoutX="46.0" layoutY="94.0" />
+                              <DatePicker fx:id="deadlineFormularTF" layoutX="34.0" layoutY="149.0" />
+                              <Button fx:id="sendFormularButton" layoutX="76.0" layoutY="195.0" mnemonicParsing="false" onAction="#onClickSend" text="Trimite cerere" />
+                              <Label layoutX="208.0" layoutY="39.0" text="Titlu" />
+                              <Label layoutX="208.0" layoutY="98.0" text="Descriere" />
+                              <Label layoutX="222.0" layoutY="153.0" text="Deadline" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
